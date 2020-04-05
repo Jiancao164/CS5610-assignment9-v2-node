@@ -5,8 +5,11 @@ var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+// const mongoose = require('mongoose')
+// mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+//     { useNewUrlParser: true, useUnifiedTopology: true })
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost:27017/whiteboard-cs5610-sp20',
+mongoose.connect('mongodb://heroku_jian:zhz941026@ds225294.mlab.com:25294/heroku_p8qmv6px',
     { useNewUrlParser: true, useUnifiedTopology: true })
 
 app.use(function (req,res, next) {
